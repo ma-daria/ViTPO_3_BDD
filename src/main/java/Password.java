@@ -53,4 +53,8 @@ public class Password {
         else
             return true;
     }
+
+    public String getString(String arg0) {
+        return "********";
+    }
 }
