@@ -23,6 +23,7 @@ Feature: Game
     When I have enteredGame "vk.com" as servis operand
     And I have enteredGame "password" as password operand
     And I add passwordGame
+    And I add servis "vk.com"
     And I have enteredGame "p" as letter operand
     And I input letter
     Then The result bool shouldGame be "true"
@@ -32,6 +33,7 @@ Feature: Game
     When I have enteredGame "vk.com" as servis operand
     And I have enteredGame "password" as password operand
     And I add passwordGame
+    And I add servis "vk.com"
     And I have enteredGame "q" as letter operand
     And I input letter
     Then The result bool shouldGame be "false"
@@ -45,6 +47,7 @@ Feature: Game
     When I have enteredGame "git.com" as servis operand
     And I have enteredGame "qwerty" as password operand
     And I add passwordGame
+    And I add servis "vk.com"
     And I have enteredGame "p" as letter operand
     And I input letter
     Then The result bool shouldGame be "true"
