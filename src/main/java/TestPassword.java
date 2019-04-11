@@ -48,4 +48,9 @@ public class TestPassword {
         Assert.assertEquals(arg0, result);
     }
 
+    @And("^I edit password for \"([^\"]*)\"$")
+    public void iEditPasswordFor(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        classPassword.Edit(arg0, password);
+    }
 }
