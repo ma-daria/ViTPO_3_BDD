@@ -16,3 +16,13 @@ Feature: Game
     And I have enteredGame "password" as password operand
     And I add passwordGame
     Then The result bool shouldGame be "false"
+
+
+  Scenario: #1.3. Запрос 1й существующей буквы
+    Given I Have class Game
+    When I have enteredGame "vk.com" as servis operand
+    And I have enteredGame "password" as password operand
+    And I add passwordGame
+    And I have enteredGame "p" as letter operand
+    And I get letter
+    Then The result bool shouldGame be "true"
