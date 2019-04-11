@@ -8,4 +8,8 @@ public class Game {
     public boolean addPassword(String servis, String password) {
         return this.password.addPassword(servis, password);
     }
+
+    public boolean inputLetter(String lettre) {
+        return true;
+    }
 }
