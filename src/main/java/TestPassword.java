@@ -65,4 +65,10 @@ public class TestPassword {
             arg = true;
         Assert.assertEquals(arg, resultB);
     }
+
+    @And("^I get string for \"([^\"]*)\"$")
+    public void iGetStringFor(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        result = classPassword.getString(arg0);
+    }
 }
