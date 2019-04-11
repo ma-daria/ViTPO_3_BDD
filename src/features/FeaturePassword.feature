@@ -64,5 +64,5 @@ Feature: Password
     When I have entered "vk.com" as servis operand
     And I have entered "password" as password operand
     And I add password
-    And I get string
+    And I get string for "vk.com"
     Then The result should be "********"
