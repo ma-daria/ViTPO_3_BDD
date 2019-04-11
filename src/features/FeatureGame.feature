@@ -76,5 +76,6 @@ Feature: Game
     And I input letter
     And I have enteredGame "d" as letter operand
     And I input letter
+    And I get password
     Then The result shouldGame be "password"
 

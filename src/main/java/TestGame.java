@@ -10,6 +10,7 @@ public class TestGame {
     String servis;
     String password;
     String letter;
+    String result;
     boolean resultB;
 
 
@@ -62,5 +63,18 @@ public class TestGame {
     public void iAddServis(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         resultB = classGame.inputServis(arg0);
+    }
+
+    @Then("^The result shouldGame be \"([^\"]*)\"$")
+    public void theResultShouldGameBe(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        if (arg0.equals("null"))
+            arg0 = null;
+        Assert.assertEquals(arg0, result);
+    }
+
+    @And("^I get password$")
+    public void iGetPassword() {
+        classGame.getPassword();
     }
 }
