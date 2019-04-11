@@ -14,7 +14,8 @@ public class TestGame {
 
     @Given("^I Have class Game$")
     public void iHaveClassGame() {
-        classGame = new Game();
+        Password classPassword;
+        classGame = new Game(classPassword);
     }
 
     @When("^I have enteredGame \"([^\"]*)\" as servis operand$")
