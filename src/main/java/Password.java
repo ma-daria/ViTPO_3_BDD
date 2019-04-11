@@ -19,6 +19,10 @@ public class Password {
     }
 
     public String getPassword(String servis) {
-        return  password.get(servis);
+        String st = password.get(servis);
+        if (st == null)
+            return null;
+        else
+            return st;
     }
 }

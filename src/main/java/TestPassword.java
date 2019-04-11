@@ -43,7 +43,7 @@ public class TestPassword {
     public void theResultShouldBe(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
 
-        if (arg0 == "null")
+        if (arg0.equals("null"))
             arg0 = null;
         Assert.assertEquals(arg0, result);
     }
