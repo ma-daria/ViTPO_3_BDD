@@ -1,10 +1,11 @@
 public class Game {
+    private Password password;
 
-    public Game(){
-
+    public Game(Password password){
+        this.password = password;
     }
 
     public boolean addPassword(String servis, String password) {
-        return true;
+        return this.password.addPassword(servis, password);
     }
 }

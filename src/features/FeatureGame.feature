@@ -12,7 +12,7 @@ Feature: Game
     When I have enteredGame "vk.com" as servis operand
     And I have enteredGame "password" as password operand
     And I add passwordGame
-    When I have enteredGame "vk" as servis operand
+    When I have enteredGame "vk.com" as servis operand
     And I have enteredGame "password" as password operand
     And I add passwordGame
     Then The result bool shouldGame be "false"

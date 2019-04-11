@@ -14,7 +14,7 @@ public class TestGame {
 
     @Given("^I Have class Game$")
     public void iHaveClassGame() {
-        Password classPassword;
+        Password classPassword = new Password();
         classGame = new Game(classPassword);
     }
 
