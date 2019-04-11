@@ -77,4 +77,10 @@ public class TestPassword {
         // Write code here that turns the phrase above into concrete actions
         classPassword.chekLetter(arg0, arg1);
     }
+
+    @And("^I chek servis \"([^\"]*)\"$")
+    public void iChekServis(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        classPassword.chekExist(arg0);
+    }
 }
