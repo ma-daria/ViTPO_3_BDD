@@ -34,4 +34,15 @@ public class Password {
         this.password.put(servis,  password);
         return true;
     }
+
+    public int chekLetter(String letter, String servis) {
+        String password = getPassword(servis);
+        int kol = 0;
+        char[] st = password.toCharArray();
+        for(int i=0; i < st.length; i++)
+            if (st[i] == letter.toCharArray()[0] ) {
+                kol++;
+            }
+        return  kol;
+    }
 }

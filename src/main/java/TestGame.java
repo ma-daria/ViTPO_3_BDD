@@ -9,7 +9,7 @@ public class TestGame {
     Game classGame;
     String servis;
     String password;
-    String lettre;
+    String letter;
     boolean resultB;
 
 
@@ -49,11 +49,12 @@ public class TestGame {
     @And("^I have enteredGame \"([^\"]*)\" as letter operand$")
     public void iHaveEnteredGameAsLetterOperand(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        lettre = arg0;
+        letter = arg0;
     }
 
-    @And("^I get letter$")
-    public void iGetLetter() {
-        resultB = classGame.inputLetter(lettre);
+
+    @And("^I input letter$")
+    public void iInputLetter() {
+        resultB = classGame.inputLetter(letter);
     }
 }
