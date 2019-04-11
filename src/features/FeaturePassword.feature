@@ -57,3 +57,12 @@ Feature: Password
     And I have entered "pass" as password operand
     And I edit password for "vk"
     Then The result bool should be "false"
+
+
+  Scenario: #0.7. Возврат строки. Нет угаданных букв
+    Given I Have class password
+    When I have entered "vk.com" as servis operand
+    And I have entered "password" as password operand
+    And I add password
+    And I get string
+    Then The result should be "********"
