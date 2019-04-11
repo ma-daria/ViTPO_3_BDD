@@ -69,6 +69,6 @@ public class Password {
     }
 
     public String getString(String arg0) {
-        return "********";
+        return string;
     }
 }
