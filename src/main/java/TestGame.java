@@ -57,4 +57,10 @@ public class TestGame {
     public void iInputLetter() {
         resultB = classGame.inputLetter(letter);
     }
+
+    @And("^I add servis \"([^\"]*)\"$")
+    public void iAddServis(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        classGame.inputServis(arg0);
+    }
 }
