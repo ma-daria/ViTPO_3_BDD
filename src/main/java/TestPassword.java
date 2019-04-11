@@ -48,5 +48,4 @@ public class TestPassword {
         Assert.assertEquals(arg0, result);
     }
 
-
 }

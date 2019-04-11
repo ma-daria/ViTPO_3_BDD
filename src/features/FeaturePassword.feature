@@ -37,3 +37,14 @@ Feature: Password
     And I add password
     And I get password for "vk"
     Then The result should be "null"
+
+
+  Scenario: #0.5. Изменение пароля
+    Given I Have class password
+    When I have entered "vk.com" as servis operand
+    And I have entered "password" as password operand
+    And I add password
+    And I have entered "pass" as password operand
+    And I edit password for "vk.com"
+    And I get password for "vk.com"
+    Then The result should be "pass"
