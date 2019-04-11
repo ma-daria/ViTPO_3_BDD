@@ -65,4 +65,9 @@ public class TestPassword {
             arg = true;
         Assert.assertEquals(arg, resultB);
     }
+
+    @And("^I get string$")
+    public void iGetString() {
+        result = password.getString();
+    }
 }
