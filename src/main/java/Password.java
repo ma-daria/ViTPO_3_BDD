@@ -25,4 +25,8 @@ public class Password {
         else
             return st;
     }
+
+    public void Edit(String servis, String password) {
+        this.password.put(servis,  password);
+    }
 }
