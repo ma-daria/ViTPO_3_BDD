@@ -35,3 +35,16 @@ Feature: Game
     And I have enteredGame "q" as letter operand
     And I input letter
     Then The result bool shouldGame be "false"
+
+
+  Scenario: #1.5. Добавление 2х паролей. Запрос буквы из 1го пароля
+    Given I Have class Game
+    When I have enteredGame "vk.com" as servis operand
+    And I have enteredGame "password" as password operand
+    And I add passwordGame
+    When I have enteredGame "git.com" as servis operand
+    And I have enteredGame "qwerty" as password operand
+    And I add passwordGame
+    And I have enteredGame "p" as letter operand
+    And I input letter
+    Then The result bool shouldGame be "true"
