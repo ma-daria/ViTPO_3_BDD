@@ -25,4 +25,8 @@ public class Game {
         }
         return fl;
     }
+
+    public String getPassword() {
+        return password.getPassword(servis);
+    }
 }

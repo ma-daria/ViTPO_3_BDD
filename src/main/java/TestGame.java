@@ -75,6 +75,6 @@ public class TestGame {
 
     @And("^I get password$")
     public void iGetPassword() {
-        classGame.getPassword();
+        result = classGame.getPassword();
     }
 }
