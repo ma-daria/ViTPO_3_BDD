@@ -30,12 +30,13 @@ public class TestPassword {
 
     @And("^I add password$")
     public void iAddPassword() {
-        result = classPassword.addPassword(servis, password);
+        classPassword.addPassword(servis, password);
     }
 
     @Then("^The result should be \"([^\"]*)\"$")
     public void theResultShouldBe(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+        result = classPassword.getPassword(servis);
         Assert.assertEquals(result, arg0);
     }
 }
