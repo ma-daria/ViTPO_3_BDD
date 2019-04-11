@@ -33,10 +33,17 @@ public class TestPassword {
         classPassword.addPassword(servis, password);
     }
 
+    @And("^I get password for \"([^\"]*)\"$")
+    public void iGetPasswordFor(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        result = classPassword.getPassword(servis);
+    }
+
     @Then("^The result should be \"([^\"]*)\"$")
     public void theResultShouldBe(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        result = classPassword.getPassword(servis);
         Assert.assertEquals(result, arg0);
     }
+
+
 }
