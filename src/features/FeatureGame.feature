@@ -66,9 +66,6 @@ Feature: Game
     When I have enteredGame "vk.com" as servis operand
     And I have enteredGame "password" as password operand
     And I add passwordGame
-    When I have enteredGame "git.com" as servis operand
-    And I have enteredGame "qwerty" as password operand
-    And I add passwordGame
     And I add servis "vk.com"
     And I have enteredGame "p" as letter operand
     And I input letter
@@ -78,4 +75,21 @@ Feature: Game
     And I input letter
     And I get password
     Then The result shouldGame be "password"
+
+
+  Scenario: #1.8. Вывод пароля. 2 верные буквы. 1 неверная
+    Given I Have class Game
+    When I have enteredGame "vk.com" as servis operand
+    And I have enteredGame "password" as password operand
+    And I add passwordGame
+    And I add servis "vk.com"
+    And I have enteredGame "p" as letter operand
+    And I input letter
+    And I have enteredGame "q" as letter operand
+    And I input letter
+    And I have enteredGame "d" as letter operand
+    And I input letter
+    And I get password
+    Then The result shouldGame be "null"
+
 
