@@ -66,3 +66,13 @@ Feature: Password
     And I add password
     And I get string for "vk.com"
     Then The result should be "********"
+
+
+  Scenario: #0.8. Возврат строки. Угаданна 1а буква
+    Given I Have class password
+    When I have entered "vk.com" as servis operand
+    And I have entered "password" as password operand
+    And I add password
+    And I chek letter "p" from "vk.com"
+    And I get string for "vk.com"
+    Then The result should be "p*******"
