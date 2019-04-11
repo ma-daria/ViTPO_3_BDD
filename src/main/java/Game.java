@@ -7,7 +7,6 @@ public class Game {
     }
 
     public boolean addPassword(String servis, String password) {
-        this.servis = servis;
         return this.password.addPassword(servis, password);
     }
 
@@ -17,5 +16,9 @@ public class Game {
             return false;
         else
             return true;
+    }
+
+    public void inputServis(String arg0) {
+        servis = arg0;
     }
 }
