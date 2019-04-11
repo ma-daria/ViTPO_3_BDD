@@ -51,3 +51,12 @@ Feature: Game
     And I have enteredGame "p" as letter operand
     And I input letter
     Then The result bool shouldGame be "true"
+
+
+  Scenario: #1.6. Добавление не сущ сервиса
+    Given I Have class Game
+    When I have enteredGame "vk.com" as servis operand
+    And I have enteredGame "password" as password operand
+    And I add passwordGame
+    And I add servis "vk"
+    Then The result bool shouldGame be "false"
