@@ -18,7 +18,11 @@ public class Game {
             return true;
     }
 
-    public void inputServis(String arg0) {
-        servis = arg0;
+    public boolean inputServis(String servis) {
+        boolean fl = password.chekExist(servis);
+        if (fl) {
+            this.servis = servis;
+        }
+        return fl;
     }
 }

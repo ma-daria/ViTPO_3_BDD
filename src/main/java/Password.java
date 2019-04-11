@@ -45,4 +45,12 @@ public class Password {
             }
         return  kol;
     }
+
+    public boolean chekExist(String servis) {
+        String st = password.get(servis);
+        if (st  == null)
+            return false;
+        else
+            return true;
+    }
 }
