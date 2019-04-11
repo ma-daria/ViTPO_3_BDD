@@ -9,6 +9,7 @@ public class TestGame {
     Game classGame;
     String servis;
     String password;
+    String lettre;
     boolean resultB;
 
 
@@ -43,5 +44,16 @@ public class TestGame {
         else
             arg = true;
         Assert.assertEquals(arg, resultB);
+    }
+
+    @And("^I have enteredGame \"([^\"]*)\" as letter operand$")
+    public void iHaveEnteredGameAsLetterOperand(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        lettre = arg0;
+    }
+
+    @And("^I get letter$")
+    public void iGetLetter() {
+        resultB = classGame.inputLetter(lettre);
     }
 }
