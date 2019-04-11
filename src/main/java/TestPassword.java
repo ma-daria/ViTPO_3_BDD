@@ -36,13 +36,13 @@ public class TestPassword {
     @And("^I get password for \"([^\"]*)\"$")
     public void iGetPasswordFor(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        result = classPassword.getPassword(servis);
+        result = classPassword.getPassword(arg0);
     }
 
     @Then("^The result should be \"([^\"]*)\"$")
     public void theResultShouldBe(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        Assert.assertEquals(result, arg0);
+        Assert.assertEquals(arg0, result);
     }
 
 
