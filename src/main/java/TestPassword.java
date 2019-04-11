@@ -42,6 +42,9 @@ public class TestPassword {
     @Then("^The result should be \"([^\"]*)\"$")
     public void theResultShouldBe(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+
+        if (arg0 == "null")
+            arg0 = null;
         Assert.assertEquals(arg0, result);
     }
 
