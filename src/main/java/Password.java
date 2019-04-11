@@ -13,7 +13,9 @@ public class Password {
     }
 
     public void addPassword(String servis, String password) {
-        this.password.put(servis, password);
+        if (this.password.get(servis)  == null) {
+            this.password.put(servis, password);
+        }
     }
 
     public String getPassword(String servis) {
