@@ -12,10 +12,12 @@ public class Password {
         string = new HashMap<String, String>();
     }
 
-    public void addPassword(String servis, String password) {
+    public boolean addPassword(String servis, String password) {
         if (this.password.get(servis)  == null) {
             this.password.put(servis, password);
+            return true;
         }
+        return false;
     }
 
     public String getPassword(String servis) {
@@ -26,7 +28,10 @@ public class Password {
             return st;
     }
 
-    public void Edit(String servis, String password) {
+    public boolean Edit(String servis, String password) {
+        if (this.password.get(servis) == null)
+            return false;
         this.password.put(servis,  password);
+        return true;
     }
 }
